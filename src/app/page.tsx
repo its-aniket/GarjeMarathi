@@ -1,5 +1,6 @@
 import Banner from "@/components/Banner";
 import ContactUs from "@/components/ContactUs";
+import Footer from "@/components/Footer";
 import GMGImpact from "@/components/GMGImpact";
 import Info from "@/components/Info";
 
@@ -16,6 +17,7 @@ export default function Home() {
       <GMGImpact />
       <Initiatives />
       <ContactUs />
+      <Footer />
     </div>
   );
 }
