@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@tailwind utilities;
+
+@layer utilities {
+  .text-dynamic {
+    font-size: calc(clamp(2.25em, 7vw, 4em) * 0.875);
+  }
+}
