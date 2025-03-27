@@ -1,6 +1,6 @@
 export const navlinks = [
     { href: "/", text: "home" },
-    { href: "/AboutGMG", text: "About GMG" },
+    { href: "/about_us", text: "About GMG" },
     {
       text: "Initiatives",
       href: "/Initiatives",
