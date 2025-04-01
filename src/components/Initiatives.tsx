@@ -1,55 +1,7 @@
+import { initiativesData } from '@/constants';
 import React from 'react';
-
-const initiativesData = [
-  {
-    title: 'Campus to Corporate',
-    description: 'The Campus to Corporate initiative by Garje Marathi Global is designed to help students transition smoothly from academic environments to professional',
-    image: '/images/campus-corporate.jpg',
-    backgroundColor: 'bg-orange-500',
-  },
-  {
-    title: 'Chamber of Commerce',
-    description: 'The Chamber of Commerce by Garje Marathi Global is dedicated to fostering business growth and professional collaboration within the global Marathi',
-    image: '/images/chamber-commerce.jpg',
-    backgroundColor: 'bg-blue-600',
-  },
-  {
-    title: 'Maha Marketplace',
-    description: 'The Maha Marketplace is a platform created by Garje Marathi Global that aims to showcase and export products from every district of Maharashtra to',
-    image: '/images/maha-marketplace.jpg',
-    backgroundColor: 'bg-purple-600',
-  },
-  {
-    title: 'Mentor Connect',
-    description: 'The Mentor Connect Program by Garje Marathi Global aims to bridge the gap between successful professionals and those aspiring to achieve similar',
-    image: '/images/mentor-connect.jpg',
-    backgroundColor: 'bg-gray-700',
-  },
-  {
-    title: 'Professional Network',
-    description: 'A comprehensive networking platform connecting Marathi professionals across various industries and geographical boundaries',
-    image: '/images/professional-network.jpg',
-    backgroundColor: 'bg-green-600',
-  },
-  {
-    title: 'Startup Incubator',
-    description: 'Supporting and nurturing innovative Marathi entrepreneurs by providing mentorship, resources, and funding opportunities',
-    image: '/images/startup-incubator.jpg',
-    backgroundColor: 'bg-indigo-600',
-  },
-  {
-    title: 'Cultural Exchange',
-    description: 'Promoting Marathi culture, language, and heritage through global events, workshops, and collaborative programs',
-    image: '/images/cultural-exchange.jpg',
-    backgroundColor: 'bg-pink-600',
-  },
-  {
-    title: 'Global Education',
-    description: 'Facilitating educational opportunities and scholarships for Marathi students pursuing higher education internationally',
-    image: '/images/global-education.jpg',
-    backgroundColor: 'bg-teal-600',
-  }
-];
+import Link from 'next/link';
+import Image from 'next/image';
 
 const InitiativesSection = () => {
   return (
@@ -64,21 +16,29 @@ const InitiativesSection = () => {
         {initiativesData.map((initiative, index) => (
           <div 
             key={index} 
-            className="group relative overflow-hidden rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105"
+            className="group relative overflow-hidden rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 flex flex-col h-full"
           >
-            <div className={`relative h-64 w-full ${initiative.backgroundColor}`}>
-              <div className="absolute inset-0 bg-black opacity-40"></div>
+            <div className="relative h-64 w-full">
+              <Image
+                src={initiative.image}
+                alt={initiative.title}
+                fill
+                className="object-cover"
+              />
+              
               <div className="absolute top-4 left-4 text-white text-2xl font-bold z-10">
-                {initiative.title}
+                
               </div>
             </div>
-            <div className="p-6 bg-white">
-              <p className="text-gray-600 mb-4">
+            <div className="p-6 bg-white flex-grow flex flex-col justify-between">
+              <p className="text-gray-600 mb-4 line-clamp-3 h-20">
                 {initiative.description}
               </p>
-              <button className="text-orange-500 font-semibold hover:text-orange-600 transition-colors">
-                Read More →
-              </button>
+              <Link href={initiative.href}>
+                <button className="text-orange-500 font-semibold hover:text-orange-600 hover:cursor-pointer transition-colors">
+                  Read More →
+                </button>
+              </Link>
             </div>
           </div>
         ))}

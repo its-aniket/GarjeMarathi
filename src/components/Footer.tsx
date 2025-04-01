@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { navlinks } from '@/constants';
 
 const Footer = () => {
   return (
@@ -25,18 +26,13 @@ const Footer = () => {
           <div>
             <h4 className="text-xl font-semibold mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              {[
-                { name: 'Home', href: '/' },
-                { name: 'Initiatives', href: '/initiatives' },
-                { name: 'About Us', href: '/about' },
-                { name: 'Contact', href: '/contact' }
-              ].map((link) => (
-                <li key={link.name}>
+              {navlinks.map((link) => (
+                <li key={link.text}>
                   <Link 
                     href={link.href} 
                     className="text-white text-opacity-80 hover:text-opacity-100 transition-all"
                   >
-                    {link.name}
+                    {link.text}
                   </Link>
                 </li>
               ))}

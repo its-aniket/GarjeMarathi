@@ -103,7 +103,7 @@ const Navbar = () => {
                       <span>{link.text}</span>
                       <ChevronDown className="w-4 h-4" />
                     </button>
-                    <div className="absolute top-full left-0 w-48 bg-white shadow-lg rounded-md py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <div className="absolute top-full left-0 w-62 bg-white shadow-lg rounded-md py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                       {link.sublinks.map((sublink, subIndex) => (
                         <Link
                           key={subIndex}
