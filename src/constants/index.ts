@@ -1,4 +1,3 @@
-import { forwardRef } from "react";
 
 export const navlinks = [
     { href: "/", text: "home" },

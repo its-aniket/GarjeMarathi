@@ -14,7 +14,7 @@ const TermsPage = () => {
           <div className="prose prose-lg ">
             <section className="mb-6">
               <h2 className="text-2xl font-semibold mb-4">ACCEPTANCE OF TERMS</h2>
-              <p>Thank you for visiting and using this site. These Terms of Service (the &quotTerms&quot) are intended to make you aware of your legal rights and responsibilities with respect to your access to and use of Garje Marathi Global portal and any related mobile or software applications including but not limited to delivery of information via the website whether existing now or in the future that link to the Terms (collectively, the "Services").</p>
+              <p>Thank you for visiting and using this site. These Terms of Service (the &quotTerms&quot) are intended to make you aware of your legal rights and responsibilities with respect to your access to and use of Garje Marathi Global portal and any related mobile or software applications including but not limited to delivery of information via the website whether existing now or in the future that link to the Terms (collectively, the &quotServices&quot).</p>
               
               <p>These Terms are effective for all existing and future users accounts including but without limitation to users who have joined the platform as a part of formal business between an Garje Marathi Global (hereafter referred as GMG) and AlmaShines.</p>
               
