@@ -2,10 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { initiativesData } from '@/constants';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 
-// Define the types
+// Define the Initiative type
 interface Initiative {
   title: string;
   description: string;
@@ -15,15 +13,17 @@ interface Initiative {
   backgroundColor?: string;
 }
 
-interface InitiativePageProps {
+// Use the correct Next.js App Router types
+interface PageProps {
   params: {
     slug: string;
   };
+  searchParams?: { [key: string]: string | string[] | undefined };
 }
 
-export default function InitiativePage({ params }: InitiativePageProps) {
+export default function InitiativePage({ params }: PageProps) {
   // Find the initiative data based on the URL slug
-  const slug = params?.slug;
+  const slug = params.slug;
   const initiative: Initiative | undefined = initiativesData.find(
     (item) => item.href === `/initiatives/${slug}`
   );
@@ -42,9 +42,8 @@ export default function InitiativePage({ params }: InitiativePageProps) {
 
   return (
     <div className="min-h-screen bg-gray-50">
-        <Navbar />
       {/* Banner Section */}
-      <div className="relative h-96 w-full mt-24">
+      <div className="relative h-96 w-full">
         <Image
           src={initiative.image}
           alt={initiative.title}
@@ -52,8 +51,11 @@ export default function InitiativePage({ params }: InitiativePageProps) {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 flex items-end justify-center">
-          
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white text-center px-4">
+            {initiative.title}
+          </h1>
         </div>
       </div>
 
@@ -81,7 +83,6 @@ export default function InitiativePage({ params }: InitiativePageProps) {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }
