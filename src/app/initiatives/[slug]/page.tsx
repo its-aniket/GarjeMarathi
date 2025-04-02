@@ -1,34 +1,21 @@
-import React from 'react';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { initiativesData } from '@/constants';
 
-// Define the Initiative type
-interface Initiative {
-  title: string;
-  description: string;
-  image: string;
-  pageText: string;
-  href: string;
-  backgroundColor?: string;
-}
+type Props = {
+  params: { 
+    slug: string 
+  }
+};
 
-// Use the correct Next.js App Router types
-interface PageProps {
-  params: {
-    slug: string;
-  };
-  searchParams?: { [key: string]: string | string[] | undefined };
-}
-
-export default function InitiativePage({ params }: PageProps) {
-  // Find the initiative data based on the URL slug
-  const slug = params.slug;
-  const initiative: Initiative | undefined = initiativesData.find(
+export default function InitiativePage({ params }: Props) {
+  const { slug } = params;
+  
+  const initiative = initiativesData.find(
     (item) => item.href === `/initiatives/${slug}`
   );
 
-  // Fallback in case initiative is not found
   if (!initiative) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -36,9 +23,6 @@ export default function InitiativePage({ params }: PageProps) {
       </div>
     );
   }
-
-  // Now we know initiative exists, but let's add extra safety
-  const pageText = initiative.pageText || "More information coming soon.";
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -65,7 +49,7 @@ export default function InitiativePage({ params }: PageProps) {
           <div className="bg-white rounded-lg shadow-lg p-8">
             <div className="prose prose-lg max-w-none">
               {/* Split text into paragraphs for better readability */}
-              {pageText.split('\n\n').map((paragraph, index) => (
+              {initiative.pageText.split('\n\n').map((paragraph, index) => (
                 <p key={index} className="mb-6 text-gray-700 leading-relaxed">
                   {paragraph}
                 </p>
