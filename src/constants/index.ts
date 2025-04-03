@@ -1,4 +1,3 @@
-import { url } from "inspector";
 
 export const navlinks = [
     { href: "/", text: "home" },
@@ -151,7 +150,7 @@ export const navlinks = [
       id: "newsletter-april-2024",
       title: "April 2025 Newsletter",
       date: "April 02, 2025",
-      thumbnail: "/images/newsletters/april_2025.png",
+      thumbnail: "/newsletters/thumbnails/april_2025.png",
       pdfUrl: "/newsletters/april_2025.pdf",
       description: "GMG collaborated with Maharashtra Information Technology Suport Center. With this collaboration, GMG will reach out to students from all districts of Maharashtra and help them to get a global exposure through our mentor network."
     },
@@ -159,7 +158,7 @@ export const navlinks = [
       id: "newsletter-febmarch-2025",
       title: "February-March 2025 Newsletter",
       date: "March 02, 2025",
-      thumbnail: "/images/newsletters/thumbnails/febandmarch.png",
+      thumbnail: "/newsletters/thumbnails/febandmarch.png",
       pdfUrl: "/newsletters/febmarch.pdf",
       description: "With immense pride and joy, we announce the inauguration of Garje Marathi Global Foundation's Corporate Office! This marks a significant step toward our vision of becoming a truly corporate-cultured organization, strengthening our commitment to empowering the global Marathi community. What was once a dream has now become a reality—our very own office, a hub for collaboration, innovation, and impactful initiatives!."
     },
@@ -167,7 +166,7 @@ export const navlinks = [
       id: "newsletter-jan-2025",
       title: "January 2025 NewsletterGMG launches GAURAV, its newsletter on auspicious Makar Sankranti",
       date: "January 14, 2025",
-      thumbnail: "/images/newsletters/thumbnails/jan_2025.png",
+      thumbnail: "/newsletters/thumbnails/jan_2025.png",
       pdfUrl: "/newsletters/jan_2025.pdf",
       description: "Garje Marathi Global is takes a lot of pride in celebrating success of fellow members. It is an acknowledgement of what these members achieved, also encourages others to take an inspiration from them. Here are few such success stories of our members."
     },
