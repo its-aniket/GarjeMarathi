@@ -2,6 +2,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { initiativesData } from '@/constants';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 type Props = {
   params: { 
@@ -9,9 +11,10 @@ type Props = {
   }
 };
 
-export default function InitiativePage({ params }: Props) {
-  const { slug } = params;
-  
+export default async function InitiativePage({ params }: Props) {
+  const resolvedParams = await params;
+  const { slug } = resolvedParams;
+
   const initiative = initiativesData.find(
     (item) => item.href === `/initiatives/${slug}`
   );
@@ -27,7 +30,8 @@ export default function InitiativePage({ params }: Props) {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Banner Section */}
-      <div className="relative h-96 w-full">
+      <Navbar />
+      <div className="relative h-96 w-full mt-24">
         <Image
           src={initiative.image}
           alt={initiative.title}
@@ -35,12 +39,8 @@ export default function InitiativePage({ params }: Props) {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white text-center px-4">
-            {initiative.title}
-          </h1>
-        </div>
+        
+        
       </div>
 
       {/* Content Section */}
@@ -58,7 +58,7 @@ export default function InitiativePage({ params }: Props) {
 
             {/* Join Button */}
             <div className="mt-12 text-center">
-              <Link href="/contact">
+              <Link href={initiative.redirectHref}>
                 <button className="bg-[#ed9702] hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
                   Join This Initiative
                 </button>
@@ -67,6 +67,7 @@ export default function InitiativePage({ params }: Props) {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
