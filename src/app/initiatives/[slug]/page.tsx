@@ -1,23 +1,21 @@
-
+"use client"
 import Image from 'next/image';
 import Link from 'next/link';
 import { initiativesData } from '@/constants';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { useParams } from 'next/navigation';
 
-type Props = {
-  params: { 
-    slug: string 
-  }
-};
 
-export default async function InitiativePage({ params }: Props) {
-  const resolvedParams = await params;
-  const { slug } = resolvedParams;
 
-  const initiative = initiativesData.find(
-    (item) => item.href === `/initiatives/${slug}`
-  );
+export default function InitiativePage() {
+  const params = useParams();
+  const { slug } = params;
+  const initiative = initiativesData.find(initiative => initiative.slug === slug);
+  
+ 
+
+
 
   if (!initiative) {
     return (
@@ -39,8 +37,6 @@ export default async function InitiativePage({ params }: Props) {
           className="object-cover"
           priority
         />
-        
-        
       </div>
 
       {/* Content Section */}
@@ -70,11 +66,4 @@ export default async function InitiativePage({ params }: Props) {
       <Footer />
     </div>
   );
-}
-
-// For Next.js App Router - generate paths from your data
-export async function generateStaticParams() {
-  return initiativesData.map((initiative) => ({
-    slug: initiative.href.split('/').pop(),
-  }));
 }
