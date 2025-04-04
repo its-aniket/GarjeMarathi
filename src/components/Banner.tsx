@@ -107,12 +107,7 @@ const Banner = () => {
             ref={currentContentRef}
             className="absolute bottom-0 left-0 p-8 text-white z-10 w-full bg-gradient-to-t from-black/70 to-transparent"
           >
-            <h2 className="text-4xl font-bold mb-2">
-              {banners[currentSlide].title}
-            </h2>
-            <p className="text-lg text-gray-200">
-              {banners[currentSlide].description}
-            </p>
+            
           </div>
         </div>
 
@@ -132,12 +127,7 @@ const Banner = () => {
             ref={nextContentRef}
             className="absolute bottom-0 left-0 p-8 text-white z-10 w-full bg-gradient-to-t from-black/70 to-transparent opacity-0"
           >
-            <h2 className="text-4xl font-bold mb-2">
-              {banners[nextSlideIndex].title}
-            </h2>
-            <p className="text-lg text-gray-200">
-              {banners[nextSlideIndex].description}
-            </p>
+           
           </div>
         </div>
 

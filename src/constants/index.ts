@@ -1,7 +1,7 @@
 
 export const navlinks = [
     { href: "/", text: "home" },
-    { href: "/about_us", text: "About GMG" },
+    { href: "/about_us", text: "About GMGF" },
     {
       text: "Initiatives",
       href: "/Initiatives",

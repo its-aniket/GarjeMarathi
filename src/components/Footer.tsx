@@ -77,7 +77,7 @@ const Footer = () => {
               </li>
               <li>
                 <span className="text-white text-opacity-80">
-                  Address: California, USA & Maharashtra, India
+                  Address: zCon, S. No. 98, Plot No. 23, Right Bhusari Colony, Kothrud, Pune 411038, Maharashtra, India.
                 </span>
               </li>
             </ul>
