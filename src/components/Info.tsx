@@ -1117,7 +1117,7 @@ const Info = () => {
                   <h3 className="font-semibold text-lg mb-2">Give Back</h3>
                   <p className="text-gray-600">
                     Developing meaningful channels to contribute to
-                    Maharashtra's growth and prosperity
+                    Maharashtra&apos;s growth and prosperity
                   </p>
                 </div>
               </div>

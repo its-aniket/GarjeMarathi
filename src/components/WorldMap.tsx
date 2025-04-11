@@ -44,7 +44,7 @@ export default function GlobalCommunityMap() {
     const total = chapters.reduce((sum, c) => sum + c.members, 0);
     setTotalMembers(total);
 
-    let obj = { val: 0 };
+    const obj = { val: 0 };
     gsap.to(obj, {
       val: total,
       duration: 2.5,
