@@ -38,7 +38,7 @@ export default function NewsletterPage() {
     <div className="min-h-screen bg-white">
       <Navbar />
       {/* Hero Section */}
-      <div className="bg-orange-500 py-16 px-4 sm:px-6 lg:px-8 text-white mt-24">
+      <div className="bg-orange-500 py-16 px-4 sm:px-6 lg:px-8 text-white lg:mt-24">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl font-bold mb-4">Our Newsletters</h1>
           <p className="text-xl max-w-3xl">

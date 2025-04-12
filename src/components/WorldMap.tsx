@@ -121,7 +121,7 @@ export default function GlobalCommunityMap() {
   const chapterPoints = chapters.map(ch => latLngToXY(ch.lat, ch.lng, width, height));
 
   return (
-    <div className="w-full bg-gray-50 py-16 mt-24 overflow-hidden"><div className="text-center mb-16">
+    <div className="w-full bg-gray-50 py-16 overflow-hidden lg:mt-22"><div className="text-center mb-16">
     <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-8">
       Welcome To Garje Marathi Global Foundation
     </h1>

@@ -132,9 +132,9 @@ export const navlinks = [
       description: 'The Youth Association Program, organized by Garje Marathi Global (GMG), aims to unite young individuals connected to Maharashtra, either by birth or family roots. The primary objective of this initiative is to create a vibrant platform for Maharashtrian youth globally, fostering camaraderie and leadership among its members.',
       image: '/images/initiatives/youth_association.jpg',
       pageText: "The Youth Association Program, organized by Garje Marathi Global (GMG), aims to unite young individuals connected to Maharashtra, either by birth or family roots. The primary objective of this initiative is to create a vibrant platform for Maharashtrian youth globally, fostering camaraderie and leadership among its members. The program focuses on developing essential skills such as entrepreneurship and leadership, promoting collaborative efforts for career growth, and encouraging constructive dialogue among participants. By providing a structured environment, GMG seeks to equip young individuals with the tools necessary for personal and professional advancement. To achieve these goals, the GMG Youth Association hosts various events, including panel discussions, workshops, and networking opportunities. Notable topics covered in these gatherings include startups, career progression, and technological advancements, ensuring that participants gain insights from industry experts. The program emphasizes collaboration and support among members to create a strong professional network, ultimately enabling participants to excel in their chosen fields.",
-      href: "/initiatives/yout_association",
+      href: "/initiatives/youth_association",
       slug: "youth_association",
-      redirectHref: "https://www.garjemarathi.com/group/ya)",
+      redirectHref: "https://www.garjemarathi.com/group/ya",
       backgroundColor: 'bg-blue-600',
     },
     {
